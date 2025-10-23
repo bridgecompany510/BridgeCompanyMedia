@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridge Company Media</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D1426; /* Deep Blue from logo */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#0D1426',    /* Deep Blue from logo */
+                        'accent-yellow': '#FFCC66',   /* Bright Yellow from logo */
+                        'accent-blue-light': '#66A5D9', /* Lighter Blue from bridge details */
+                        'secondary-orange': '#F2A03D', /* Orange from sun/background */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary-dark text-white min-h-screen">
+
+    <header class="sticky top-0 z-50 bg-primary-dark/95 backdrop-blur-sm shadow-lg border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo - Now using the provided image with text --><a href="#" class="flex items-center">
+                <img src="https://i.imgur.com/v10fF0R.png" alt="Bridge Company Media Logo" class="h-12 w-auto">
+            </a>
+
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-300 hover:text-accent-blue-light transition duration-200 font-medium">Videos</a>
+                <a href="#" class="text-gray-300 hover:text-accent-blue-light transition duration-200 font-medium">Music</a>
+                <a href="#" class="text-gray-300 hover:text-accent-blue-light transition duration-200 font-medium">Culture</a>
+                <a href="#" class="text-gray-300 hover:text-accent-blue-light transition duration-200 font-medium">Contact</a>
+            </nav>
+
+            <button id="menu-button" class="md:hidden p-2 text-gray-300 rounded-lg hover:bg-gray-800 transition duration-200">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">Videos</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">Music</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">Culture</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-800">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <section class="mb-16">
+            <h2 class="text-xl font-bold mb-4 text-accent-blue-light uppercase tracking-wider">Featured Exclusive</h2>
+            <div class="relative rounded-xl overflow-hidden shadow-2xl transition duration-300 hover:shadow-accent-blue-light/30">
+                <div class="aspect-video bg-gray-800 flex items-center justify-center p-8">
+                    <img src="https://placehold.co/1280x720/1f2937/d1d5db?text=FEATURED+VIDEO+TITLE"
+                         alt="Featured video thumbnail"
+                         class="w-full h-full object-cover opacity-70 transition duration-300 hover:opacity-100"
+                         onerror="this.src='https://placehold.co/1280x720/1f2937/d1d5db?text=FEATURED+VIDEO+TITLE';"
+                    >
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button class="p-4 bg-accent-blue-light/80 hover:bg-accent-blue-light rounded-full transition duration-300 transform hover:scale-105 shadow-xl">
+                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 5.5l14 6.5-14 6.5z"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-primary-dark/90 to-transparent w-full">
+                    <p class="text-sm font-semibold text-gray-400">NEW DROP | JULY 2025</p>
+                    <h3 class="text-4xl sm:text-5xl font-extrabold leading-tight hover:text-accent-yellow transition duration-200">
+                        <a href="#">The Hyphy Legacy: Bay Area's Newest Anthem</a>
+                    </h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 border-b-4 border-accent-blue-light pb-2">Latest Drops</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="#" class="block bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-accent-blue-light/40 transition duration-300 transform hover:-translate-y-1">
+                    <div class="aspect-video bg-gray-700">
+                        <img src="https://placehold.co/600x338/374151/ffffff?text=Video+1+Title" alt="Video thumbnail 1" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x338/374151/ffffff?text=Video+1+Title';">
+                    </div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-400 mb-1">Artist Name</p>
+                        <h4 class="text-lg font-semibold leading-snug hover:text-accent-blue-light transition duration-200">Title of the Latest Music Video Drop</h4>
+                    </div>
+                </a>
+                <a href="#" class="block bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-accent-blue-light/40 transition duration-300 transform hover:-translate-y-1">
+                    <div class="aspect-video bg-gray-700">
+                        <img src="https://placehold.co/600x338/4b5563/ffffff?text=Video+2+Title" alt="Video thumbnail 2" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x338/4b5563/ffffff?text=Video+2+Title';">
+                    </div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-400 mb-1">Local Spotlight</p>
+                        <h4 class="text-lg font-semibold leading-snug hover:text-accent-blue-light transition duration-200">Exclusive Interview: Rising Star from Oakland</h4>
+                    </div>
+                </a>
+                <a href="#" class="block bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-accent-blue-light/40 transition duration-300 transform hover:-translate-y-1">
+                    <div class="aspect-video bg-gray-700">
+                        <img src="https://placehold.co/600x338/6b7280/ffffff?text=Video+3+Title" alt="Video thumbnail 3" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x338/6b7280/ffffff?text=Video+3+Title';">
+                    </div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-400 mb-1">Dance Challenge</p>
+                        <h4 class="text-lg font-semibold leading-snug hover:text-accent-blue-light transition duration-200">The Newest Dance Craze Sweeping the Bay</h4>
+                    </div>
+                </a>
+                <a href="#" class="block bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-accent-blue-light/40 transition duration-300 transform hover:-translate-y-1">
+                    <div class="aspect-video bg-gray-700">
+                        <img src="https://placehold.co/600x338/9ca3af/ffffff?text=Video+4+Title" alt="Video thumbnail 4" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x338/9ca3af/ffffff?text=Video+4+Title';">
+                    </div>
+                    <div class="p-4">
+                        <p class="text-sm text-gray-400 mb-1">Throwback Mix</p>
+                        <h4 class="text-lg font-semibold leading-snug hover:text-accent-blue-light transition duration-200">Classic Hyphy Beats Remixed for 2025</h4>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-bold mb-6 border-b-4 border-secondary-orange pb-2">Trending Culture & News</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="#" class="block bg-gray-800 rounded-xl p-5 shadow-lg hover:shadow-secondary-orange/40 transition duration-300">
+                    <p class="text-xs font-semibold text-secondary-orange uppercase mb-2">News</p>
+                    <h3 class="text-xl font-bold mb-2 leading-tight hover:text-accent-yellow transition duration-200">Why Local Bay Area Businesses are Collaborating with Rappers</h3>
+                    <p class="text-gray-400 text-sm">A deep dive into the recent rise of artist-brand partnerships...</p>
+                    <p class="text-xs text-gray-500 mt-3">5 min read</p>
+                </a>
+                <a href="#" class="block bg-gray-800 rounded-xl p-5 shadow-lg hover:shadow-secondary-orange/40 transition duration-300">
+                    <p class="text-xs font-semibold text-secondary-orange uppercase mb-2">Culture</p>
+                    <h3 class="text-xl font-bold mb-2 leading-tight hover:text-accent-yellow transition duration-200">The Return of the "Scraper": A Look at Bay Area Car Culture</h3>
+                    <p class="text-gray-400 text-sm">How customized classic cars are once again taking over the streets...</p>
+                    <p class="text-xs text-gray-500 mt-3">8 min read</p>
+                </a>
+                <a href="#" class="block bg-gray-800 rounded-xl p-5 shadow-lg hover:shadow-secondary-orange/40 transition duration-300">
+                    <p class="text-xs font-semibold text-secondary-orange uppercase mb-2">Review</p>
+                    <h3 class="text-xl font-bold mb-2 leading-tight hover:text-accent-yellow transition duration-200">Album Review: New Release from East Bay Phenom 'J-Flow'</h3>
+                    <p class="text-gray-400 text-sm">Our take on the highly anticipated 14-track debut album...</p>
+                    <p class="text-xs text-gray-500 mt-3">6 min read</p>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 border-t border-gray-800 mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Logo - Now using the provided image with text --><a href="#" class="flex items-center justify-center mb-4">
+                <img src="https://i.imgur.com/v10fF0R.png" alt="Bridge Company Media Logo" class="h-12 w-auto">
+            </a>
+            <div class="flex justify-center space-x-6 text-gray-400 mb-6">
+                <a href="#" class="hover:text-accent-blue-light transition duration-200">Privacy Policy</a>
+                <a href="#" class="hover:text-accent-blue-light transition duration-200">Terms of Use</a>
+                <a href="#" class="hover:text-accent-blue-light transition duration-200">Advertise</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 Bridge Company Media. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
+
