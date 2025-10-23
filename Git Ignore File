@@ -1,0 +1,11 @@
+Dependency directories
+/node_modules
+Logs and Build Artifacts
+/dist
+/build
+.temp
+Editor / OS Specific Files
+.DS_Store
+.vscode/
+Environment Variables
+.env
